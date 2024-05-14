@@ -1,4 +1,4 @@
-package com.bollwerks.chopui
+package streetlight.app.chopui
 
 import androidx.compose.ui.unit.dp
 
