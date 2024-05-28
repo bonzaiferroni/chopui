@@ -1,6 +1,8 @@
 package streetlight.app.chopui
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Scaffold
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
@@ -11,6 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import cafe.adriel.voyager.navigator.Navigator
@@ -57,4 +60,31 @@ fun Scaffold(
         content = content,
         modifier = modifier
     )
+}
+
+@Composable
+fun BoxScaffold(
+    title: String = "Ahoy Scaffold!",
+    navigator: Navigator? = null,
+    modifier: Modifier = Modifier,
+    floatingAction: (() -> Unit)? = null,
+    fabIcon: ImageVector = Icons.Filled.Add,
+    fabDescription: String = "Add",
+    content: @Composable (PaddingValues) -> Unit,
+) {
+    Scaffold(
+        title = title,
+        navigator = navigator,
+        modifier = modifier,
+        floatingAction = floatingAction,
+        fabIcon = fabIcon,
+        fabDescription = fabDescription,
+    ) {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            content(it)
+        }
+    }
 }
