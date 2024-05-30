@@ -15,5 +15,6 @@ kotlin {
 
         val voyagerVersion = "1.0.0"
         implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
+        implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
     }
 }
