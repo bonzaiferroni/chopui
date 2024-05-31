@@ -13,8 +13,7 @@ kotlin {
         implementation(compose.components.resources)
         implementation(compose.components.uiToolingPreview)
 
-        val voyagerVersion = "1.0.0"
-        implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
-        implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
+        implementation(libs.voyager.navigator)
+        implementation(libs.kotlinx.datetime)
     }
 }
