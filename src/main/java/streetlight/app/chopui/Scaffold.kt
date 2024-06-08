@@ -17,7 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import cafe.adriel.voyager.navigator.Navigator
+import moe.tlaster.precompose.navigation.Navigator
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -45,7 +45,7 @@ fun Scaffold(
 
     val navIcon: @Composable () -> Unit = if (navigator != null) {
         {
-            IconButton(onClick = { navigator.pop() }) {
+            IconButton(onClick = { navigator.goBack() }) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "back"

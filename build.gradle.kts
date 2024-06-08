@@ -13,7 +13,8 @@ kotlin {
         implementation(compose.components.resources)
         implementation(compose.components.uiToolingPreview)
 
-        implementation(libs.voyager.navigator)
         implementation(libs.kotlinx.datetime)
+        val precomposeVersion = "1.6.0"
+        implementation("moe.tlaster:precompose:$precomposeVersion")
     }
 }
