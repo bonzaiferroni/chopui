@@ -3,6 +3,7 @@ package streetlight.app.chopui
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
@@ -64,9 +65,14 @@ fun Scaffold(
             )
         },
         floatingActionButton = fab,
-        content = content,
         modifier = modifier
-    )
+    ) { paddingValues ->
+        Box(
+            modifier = Modifier.padding(paddingValues)
+        ) {
+            content(paddingValues)
+        }
+    }
 }
 
 @Composable
@@ -86,12 +92,14 @@ fun BoxScaffold(
         floatingAction = floatingAction,
         fabIcon = fabIcon,
         fabDescription = fabDescription,
-    ) {
+    ) { paddingValues ->
         Box(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .padding(paddingValues)
+                .fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-            content(it)
+            content(paddingValues)
         }
     }
 }
