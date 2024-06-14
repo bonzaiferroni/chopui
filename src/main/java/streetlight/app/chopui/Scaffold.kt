@@ -67,11 +67,7 @@ fun Scaffold(
         floatingActionButton = fab,
         modifier = modifier
     ) { paddingValues ->
-        Box(
-            modifier = Modifier.padding(paddingValues)
-        ) {
-            content(paddingValues)
-        }
+        content(paddingValues)
     }
 }
 
