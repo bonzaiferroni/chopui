@@ -12,6 +12,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -94,6 +95,34 @@ fun BoxScaffold(
                 .padding(paddingValues)
                 .fillMaxSize(),
             contentAlignment = Alignment.Center
+        ) {
+            content(paddingValues)
+        }
+    }
+}
+
+@Composable
+fun SurfaceScaffold(
+    title: String = "Ahoy Scaffold!",
+    navigator: Navigator? = null,
+    modifier: Modifier = Modifier,
+    floatingAction: (() -> Unit)? = null,
+    fabIcon: ImageVector = Icons.Filled.Add,
+    fabDescription: String = "Add",
+    content: @Composable (PaddingValues) -> Unit,
+) {
+    Scaffold(
+        title = title,
+        navigator = navigator,
+        modifier = modifier,
+        floatingAction = floatingAction,
+        fabIcon = fabIcon,
+        fabDescription = fabDescription,
+    ) { paddingValues ->
+        Surface(
+            modifier = Modifier
+                .padding(paddingValues)
+                .fillMaxSize(),
         ) {
             content(paddingValues)
         }
