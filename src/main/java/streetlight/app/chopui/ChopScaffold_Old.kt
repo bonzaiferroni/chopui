@@ -23,7 +23,7 @@ import moe.tlaster.precompose.navigation.Navigator
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Scaffold(
+fun ChopScaffold_Old(
     title: String = "Ahoy Scaffold!",
     navigator: Navigator? = null,
     modifier: Modifier = Modifier,
@@ -82,7 +82,7 @@ fun BoxScaffold(
     fabDescription: String = "Add",
     content: @Composable (PaddingValues) -> Unit,
 ) {
-    Scaffold(
+    ChopScaffold_Old(
         title = title,
         navigator = navigator,
         modifier = modifier,
@@ -111,7 +111,7 @@ fun SurfaceScaffold(
     fabDescription: String = "Add",
     content: @Composable (PaddingValues) -> Unit,
 ) {
-    Scaffold(
+    ChopScaffold_Old(
         title = title,
         navigator = navigator,
         modifier = modifier,
