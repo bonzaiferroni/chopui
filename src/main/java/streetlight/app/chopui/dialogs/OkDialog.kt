@@ -1,6 +1,7 @@
 package streetlight.app.chopui.dialogs
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
@@ -18,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import kotlinx.datetime.LocalTime
 
 @Composable
@@ -56,8 +58,8 @@ fun OkDialog(
                 )
                 content()
                 Row(
+                    horizontalArrangement = Arrangement.End,
                     modifier = Modifier
-                        .height(40.dp)
                         .fillMaxWidth()
                 ) {
                     TextButton(
