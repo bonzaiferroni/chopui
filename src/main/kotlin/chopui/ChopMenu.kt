@@ -1,4 +1,4 @@
-package streetlight.app.chopui
+package chopui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box

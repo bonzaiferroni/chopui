@@ -1,4 +1,4 @@
-package streetlight.app.chopui.dialogs
+package chopui.dialogs
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.TimePicker
@@ -6,7 +6,7 @@ import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalTime
-import streetlight.app.chopui.extensions.toLocalDateTime
+import chopui.extensions.toLocalDateTime
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

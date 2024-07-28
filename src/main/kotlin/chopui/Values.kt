@@ -1,4 +1,4 @@
-package streetlight.app.chopui
+package chopui
 
 import androidx.compose.ui.unit.dp
 

@@ -1,4 +1,4 @@
-package streetlight.app.chopui.dialogs
+package chopui.dialogs
 
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -12,7 +12,7 @@ import kotlinx.datetime.LocalTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toInstant
 import kotlinx.datetime.toLocalDateTime
-import streetlight.app.chopui.extensions.toLocalDateTime
+import chopui.extensions.toLocalDateTime
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
